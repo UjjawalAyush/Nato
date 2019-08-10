@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "644129518231",
+    "firebase_url": "https://nato-54043.firebaseio.com",
+    "project_id": "nato-54043",
+    "storage_bucket": "nato-54043.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:644129518231:android:1ea40b8cdc9a2659",
+        "android_client_info": {
+          "package_name": "com.ujjawalayush.example.nato"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "644129518231-jjnitdvvgmoniug1njkootbdhamhs142.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ujjawalayush.example.nato",
+            "certificate_hash": "0fc5059aa9455c14c9edbefe7fd20b6b96b14d3d"
+          }
+        },
+        {
+          "client_id": "644129518231-7n44jplkhjfi48ib841dgu5grmu4vl8t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANaQKNM1VXt0jBoCW1NkqTxp-LySzQM90"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "644129518231-7n44jplkhjfi48ib841dgu5grmu4vl8t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
