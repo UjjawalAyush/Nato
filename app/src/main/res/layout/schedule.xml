@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <include
+        android:id="@+id/toolbar1234"
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
+        android:textColor="@color/colorPrimaryDark" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="50dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="300dp"
+                android:layout_height="360dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/border" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/name"
+                android:layout_width="290dp"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/view"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp">
+
+                <EditText
+                    android:id="@+id/name1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext"
+                    android:hint="Place of visit"
+                    android:inputType="textPersonName"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textSize="15sp" />
+            </android.support.design.widget.TextInputLayout>
+            <EditText
+                android:id="@+id/description1"
+                android:layout_width="290dp"
+                android:layout_height="80dp"
+                android:layout_alignTop="@id/view1234"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="100dp"
+                android:background="@drawable/edittext1"
+                android:gravity="top|left"
+                android:hint="Enter Description"
+                android:inputType="textPersonName|textMultiLine"
+                android:maxLines="30"
+                android:singleLine="false"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="15sp" />
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/startingdate"
+                android:layout_width="290dp"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/view"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="150dp">
+
+                <EditText
+                    android:id="@+id/startingdate1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext"
+                    android:hint="Enter Starting Date"
+                    android:inputType="textPersonName"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textSize="15sp" />
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/endingdate"
+                android:layout_width="290dp"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/view"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="185dp">
+
+                <EditText
+                    android:id="@+id/endingdate1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext"
+                    android:hint="Enter Ending Date"
+                    android:inputType="textPersonName"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textSize="15sp" />
+            </android.support.design.widget.TextInputLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/view"
+                android:layout_marginTop="225dp"
+                android:text="Set Alarm"
+                android:layout_alignStart="@id/view"
+                android:textSize="17sp"
+                android:layout_marginStart="30dp"
+                android:textColor="@color/black" />
+            <CheckBox
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignTop="@id/view"
+                android:layout_marginTop="220dp"
+                android:layout_alignEnd="@id/view"
+                android:layout_marginEnd="30dp"
+                android:textColor="@color/black" />
+            <Button
+                android:layout_width="290dp"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/view"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="270dp"
+                android:onClick="onClick"
+                android:background="@drawable/border1"
+                android:text="Save" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

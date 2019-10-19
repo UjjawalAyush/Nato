@@ -36,12 +36,8 @@
             android:icon="@drawable/ic_person_black_24dp"
             app:showAsAction="never" />
             <item
-                android:icon="@drawable/ic_settings_black_24dp"
-                android:title="Settings"
-                app:showAsAction="never" />
-            <item
                 android:id="@+id/signout"
-                android:icon="@drawable/ic_settings_black_24dp"
+                android:icon="@android:drawable/ic_lock_power_off"
                 android:title="Sign out"
                 app:showAsAction="never" />
         </menu>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <include
+        android:id="@+id/toolbar1234"
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
+        android:textColor="@color/colorPrimaryDark" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="50dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/circularImageView1234"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignParentTop="false"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="55dp"
+                android:src="@drawable/receipt" />
+
+            <ImageButton
+                android:id="@+id/imageButton1234"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignTop="@+id/circularImageView1234"
+                android:layout_alignEnd="@id/circularImageView1234"
+                android:layout_alignParentTop="false"
+                android:layout_alignParentEnd="false"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/border1"
+                android:onClick="onClick1"
+                app:srcCompat="@drawable/ic_arrow_upward_black_24dp"
+                tools:layout_editor_absoluteX="172dp"
+                tools:layout_editor_absoluteY="111dp" />
+
+            <View
+                android:id="@+id/view1234"
+                android:layout_width="300dp"
+                android:layout_height="440dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="150dp"
+                android:background="@drawable/border" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/textInput1234"
+                android:layout_width="290dp"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/view1234"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp">
+
+                <EditText
+                    android:id="@+id/textInput1234e"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext"
+                    android:hint="Enter Category"
+                    android:inputType="textPersonName"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textSize="15sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/textInput1235"
+                android:layout_width="290dp"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/view1234"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="250dp">
+
+                <EditText
+                    android:id="@+id/textInput1235e"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext"
+                    android:hint="Enter Date"
+                    android:inputType="textPersonName"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textSize="15sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="280dp"
+                android:layout_height="150dp"
+                android:id="@+id/rr"
+                android:layout_alignTop="@id/view1234"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="90dp"
+                android:background="@color/white">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/textInput12356"
+                android:layout_width="290dp"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/view1234"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp">
+
+                <EditText
+                    android:id="@+id/textInput12356e"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext"
+                    android:hint="Enter Money Spent"
+                    android:inputType="textPersonName"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textSize="15sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <EditText
+                android:id="@+id/textInput31234e"
+                android:layout_width="290dp"
+                android:layout_height="80dp"
+                android:layout_alignTop="@id/view1234"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="290dp"
+                android:background="@drawable/edittext1"
+                android:gravity="top|left"
+                android:hint="Enter Description"
+                android:inputType="textPersonName|textMultiLine"
+                android:maxLines="30"
+                android:singleLine="false"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="15sp" />
+
+            <Button
+                android:layout_width="290dp"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/view1234"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="380dp"
+                android:onClick="onClick"
+                android:background="@drawable/border1"
+                android:text="Save" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

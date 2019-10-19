@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_margin="8dp"
+    android:id="@+id/card2"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/main3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/circular1"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="15dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="1dp"
+            android:src="@drawable/luggage"
+            app:layout_constraintVertical_bias="0.109" />
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/circular2"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="15dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="1dp"
+            android:src="@drawable/luggage"
+            app:layout_constraintVertical_bias="0.109" />
+        <TextView
+            android:id="@+id/text1112"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="Type: "
+            android:layout_alignStart="@id/circular1"
+            android:layout_marginStart="110dp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/text121"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/circular1"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="110dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="10dp"
+            android:text="Name:"
+            android:textColor="@color/lightGrey"
+            android:textSize="15sp" />
+        <TextView
+            android:id="@+id/text12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/circular1"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="110dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="10dp"
+            android:text="No.of members:"
+            android:textColor="@color/lightGrey"
+            android:textSize="15sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="90dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_alignParentStart="true"
+            android:textColor="@color/black"
+
+            android:id="@+id/date"
+            android:text="Exprected Duration: "/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="90dp"
+            android:layout_alignParentStart="false"
+            android:layout_alignEnd="@id/date"
+            android:layout_marginEnd="0dp"
+
+            android:id="@+id/date1"
+            android:text=""/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="90dp"
+            android:layout_alignParentStart="false"
+            android:layout_alignStart="@id/date1"
+            android:layout_marginStart="20dp"
+            android:textColor="@color/lightGrey"
+            android:id="@+id/date2"
+            android:text="htfdshodhuc"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="110dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/black"
+            android:id="@+id/status"
+            android:text="Status: "/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="135dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/lightGrey"
+            android:id="@+id/des"
+            android:text="Description: jddvbsuifggbhsandwffgvbdasfdgcbxgsvfbierhcbjasnxjc vab nfvjhgjyvhcnasjduhewjncjb nxzifierbacm"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/lightGrey"/>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

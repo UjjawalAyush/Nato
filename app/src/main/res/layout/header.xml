@@ -19,7 +19,19 @@
         android:layout_alignTop="@id/circularImageView2"
         android:layout_alignParentTop="false"
         android:text="Welcome Ujjawal Ayush" />
-
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/circularImageView23"
+        android:layout_width="105dp"
+        android:layout_height="105dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/ic_person_black_24dp"
+        app:civ_border_color="#EEEEEE"
+        app:civ_border_width="4dp"
+        app:civ_shadow="true"
+        app:civ_shadow_color="#8BC34A"
+        app:civ_shadow_radius="10" />
     <com.mikhaellopez.circularimageview.CircularImageView
         android:id="@+id/circularImageView2"
         android:layout_width="105dp"
@@ -34,6 +46,14 @@
         app:civ_shadow_color="#8BC34A"
         app:civ_shadow_radius="10" />
 
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:id="@+id/progress"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="42dp" />
     <TextView
         android:id="@+id/textView12"
         android:layout_width="wrap_content"

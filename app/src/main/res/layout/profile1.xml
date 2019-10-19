@@ -5,26 +5,94 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
-    <ImageView
-        android:id="@+id/imageView2"
+    <include
+        android:id="@+id/toolbar4"
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="40dp"
-        android:layout_centerHorizontal="true"
+        android:layout_marginTop="0dp"
+        android:textColor="@color/colorPrimaryDark" />
+    <ImageView
+        android:id="@+id/imageView38"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="60dp"
+        android:layout_centerHorizontal="false"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="40dp"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:background="@drawable/edittext3"
+        android:background="@drawable/border"
         app:srcCompat="@drawable/persongood"
         tools:layout_editor_absoluteX="142dp"
         tools:layout_editor_absoluteY="71dp" />
-    <ScrollView
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="60dp"
+        android:layout_centerHorizontal="false"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="40dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/border"
+        app:srcCompat="@drawable/persongood"
+        tools:layout_editor_absoluteX="142dp"
+        tools:layout_editor_absoluteY="71dp" />
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="84dp"
+        android:layout_centerHorizontal="false"
+        android:layout_alignParentStart="true"
+        android:id="@+id/progress1"
+        android:layout_marginStart="65dp"
+        />
+    <Button
+        android:id="@+id/imageButton1"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_alignTop="@+id/imageView3"
+        android:layout_alignStart="@id/imageView3"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentEnd="false"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="130dp"
+        android:text="Change Profile Pic"
+        android:background="@drawable/border1"
+        android:onClick="onClick1"
+        tools:layout_editor_absoluteX="172dp"
+        tools:layout_editor_absoluteY="111dp" />
+    <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignTop="@+id/imageView2"
-        android:layout_marginTop="110dp"
-        android:layout_alignParentBottom="true"
+        android:id="@+id/recyclerView"
+        android:background="@drawable/border"
+        android:layout_alignTop="@id/toolbar4"
+        android:layout_marginTop="200dp"
         android:layout_marginBottom="10dp"
-        >
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_alignParentTop="false"
+        />
 
-    </ScrollView>
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/imageView3"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="171dp"
+        android:text="Email:" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView15"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="100dp"
+        android:text="ujjawalayush123@gmail.com" />
 </RelativeLayout>

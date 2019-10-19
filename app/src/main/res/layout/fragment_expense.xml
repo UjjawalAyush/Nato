@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ExpenseFragment">
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="15dp"
+        android:id="@+id/bu"
+        android:text="Add Expense"
+        android:background="@drawable/border1"/>
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:id="@+id/rr"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="75dp">
+
+    </android.support.v7.widget.RecyclerView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/rr"
+        android:layout_marginTop="260dp"
+        android:layout_marginStart="10dp"
+        android:text="Payment Settlement CheckList:"/>
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/rrr"
+        android:background="@drawable/border2"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="365dp">
+
+    </android.support.v7.widget.RecyclerView>
+</RelativeLayout>

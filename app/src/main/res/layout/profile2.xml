@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="0dp"
+        android:scrollbars="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/u2"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="0dp"
+                app:srcCompat="@drawable/persongood" />
+
+            <ImageView
+                android:id="@+id/u"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="0dp"
+                app:srcCompat="@drawable/persongood" />
+
+            <TextView
+                android:id="@+id/username1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/u"
+                android:layout_alignParentEnd="true"
+                android:onClick="onClick8"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="220dp"
+                android:layout_marginEnd="50dp"
+                android:background="@drawable/border2"
+                android:text="Friend Request Sent"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+            <Button
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:layout_alignTop="@id/u"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="250dp"
+                android:layout_marginEnd="30dp"
+                android:id="@+id/q"
+                android:onClick="onClick9"
+                android:background="@drawable/border1"
+                android:text="Message"
+                android:textColor="@color/black"
+                android:textSize="13sp"/>
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/u"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="290dp"
+                android:text="Username: "
+                android:textColor="@color/lightGrey"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/u"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="315dp"
+                android:text="No.of trips: 0"
+
+                android:textColor="@color/lightGrey"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/dob"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/u"
+                android:layout_marginStart="20dp"
+
+                android:layout_marginTop="335dp"
+                android:text="Wish me on --/--/--"
+                android:textColor="@color/lightGrey"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/about_me"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/u"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="365dp"
+
+                android:layout_marginEnd="10dp"
+                android:text="Let's go on a trip!"
+                android:textColor="@color/lightGrey"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/o"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/about_me"
+                android:layout_marginBottom="-30dp" />
+
+            <TextView
+                android:id="@+id/about_me1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/o"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="10dp"
+                android:text="College:"
+
+                android:textColor="@color/lightGrey"
+
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/about_me2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/about_me1"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="-30dp"
+
+                android:text="Year of Graduation:"
+                android:textColor="@color/lightGrey"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/about_me4"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/about_me2"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="10dp"
+
+                android:text="School: "
+                android:textColor="@color/lightGrey"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/about_me3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/about_me4"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="-30dp"
+                android:text="Year of passing:"
+                android:textColor="@color/lightGrey"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/about_me5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/about_me3"
+                android:layout_marginStart="20dp"
+
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="10dp"
+
+                android:text="HomeTown: "
+                android:textColor="@color/lightGrey"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/l"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/about_me5"
+                android:layout_marginBottom="-30dp" />
+
+            <TextView
+                android:id="@+id/about_me6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/l"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="10dp"
+                android:text="Current City: "
+                android:textColor="@color/lightGrey"
+                android:textSize="13sp" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

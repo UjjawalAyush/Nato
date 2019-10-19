@@ -15,10 +15,10 @@
         android:layout_marginStart="80dp"
         android:layout_marginLeft="80dp"
         android:layout_marginTop="250dp"
+        android:textSize="15sp"
         android:ems="10"
         android:inputType="textEmailAddress"
         android:textColor="@color/white"
-        android:textSize="18dp"
         tools:layout_editor_absoluteX="85dp"
         tools:layout_editor_absoluteY="247dp" />
 

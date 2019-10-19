@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        android:id="@+id/toolbar31"
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
+        android:textColor="@color/colorPrimaryDark" />
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:id="@+id/horizontal"
+        android:background="@drawable/border"
+        android:layoutDirection="rtl"
+        android:layout_height="100dp"
+        android:layout_marginTop="60dp"
+        android:scrollbars="horizontal">
+
+    </android.support.v7.widget.RecyclerView>
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="60dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/ima"
+        android:background="@drawable/border"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="180dp"
+        android:background="@drawable/border1"
+        android:onClick="onClick"
+        android:textSize="10sp"
+        android:text="Select multiple images" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="180dp"
+        android:background="@drawable/border1"
+        android:onClick="onClick1"
+        android:textSize="10sp"
+        android:text="Select single Image" />
+    <EditText
+        android:id="@+id/textInput31e"
+        android:layout_width="290dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="260dp"
+        android:background="@drawable/edittext34"
+        android:gravity="top|left"
+        android:hint="Write Caption..."
+        android:inputType="textPersonName|textMultiLine"
+        android:maxLines="30"
+        android:singleLine="false"
+        android:textColor="@color/lightGrey"
+        android:textColorHint="@color/lightGrey"
+        android:textSize="15sp" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignTop="@id/textInput31e"
+        android:layout_marginTop="90dp"
+
+        android:background="@color/black"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tag People"
+        android:onClick="onClick3"
+        android:textColor="@color/black"
+        android:layout_alignTop="@id/textInput31e"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="20dp"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignTop="@id/textInput31e"
+        android:layout_marginTop="125dp"
+
+        android:background="@color/black"/>
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/textInput31e"
+        android:layout_marginTop="150dp"
+        android:layout_centerHorizontal="true"
+        android:onClick="onClick6"
+        android:text="Share"/>
+
+    <TextView
+        android:id="@+id/wq"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/textInput31e"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="40dp"
+        android:text="0 People"
+        android:textColor="@color/black" />
+</RelativeLayout>

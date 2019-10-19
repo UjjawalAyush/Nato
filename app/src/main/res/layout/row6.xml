@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/user1"
+        android:layout_marginStart="20dp"
+        android:background="@drawable/border2"
+        android:text="Ujjawal_Ayush"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/user1"
+        android:layout_marginEnd="-20dp"
+        android:id="@+id/user2"
+
+        />
+    <ImageButton
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignStart="@id/user2"
+        android:id="@+id/user3"
+        android:layout_marginStart="0dp"
+        android:src="@android:drawable/ic_menu_close_clear_cancel" />
+</RelativeLayout>

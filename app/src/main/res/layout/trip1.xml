@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+        <include
+            android:id="@+id/toolbar1"
+            layout="@layout/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="0dp"
+            android:textColor="@color/colorPrimaryDark" />
+        <ImageView
+            android:layout_width="100dp"
+            android:id="@+id/imageView"
+            android:src="@drawable/luggage"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="80dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/textView"
+            android:layout_marginEnd="20dp"
+            android:text="Send Request"
+            android:background="@drawable/border2"
+
+            android:layout_marginTop="200dp"
+            android:textColor="@color/black"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/rr"
+            android:text="Members :"
+            android:layout_alignTop="@id/rr"
+            android:layout_marginTop="-25dp"
+            android:textColor="@color/black"
+            android:layout_marginStart="0dp"/>
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="300dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="270dp"
+            android:id="@+id/rr"
+            android:background="@drawable/border2"
+            android:layout_centerHorizontal="true">
+
+        </android.support.v7.widget.RecyclerView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/rr"
+            android:text="Schedule :"
+            android:layout_alignTop="@id/r"
+            android:layout_marginTop="-25dp"
+            android:textColor="@color/black"
+            android:layout_marginStart="0dp"/>
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="300dp"
+            android:layout_height="150dp"
+            android:layout_alignTop="@id/rr"
+            android:layout_marginTop="200dp"
+            android:id="@+id/r"
+            android:background="@drawable/border2"
+            android:layout_centerHorizontal="true">
+        </android.support.v7.widget.RecyclerView>
+    </RelativeLayout>
+</ScrollView>

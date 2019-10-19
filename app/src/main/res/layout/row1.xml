@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_margin="8dp"
+    android:id="@+id/card_view"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/mainLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/circularImageView1156"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="15dp"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/persongood"
+            app:layout_constraintVertical_bias="0.109" />
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/circularImageView11"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="15dp"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/persongood"
+            app:layout_constraintVertical_bias="0.109" />
+        <TextView
+            android:id="@+id/text11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="51dp"
+            android:text="Ujjawal_Ayush"
+            android:layout_alignStart="@id/circularImageView11"
+            android:layout_marginStart="110dp"
+            android:textColor="@color/black"/>
+
+        <ImageView
+            android:id="@+id/person"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            tools:srcCompat="@drawable/ic_people_black_24dp" />
+
+        <TextView
+            android:id="@+id/text12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/circularImageView11"
+            android:layout_alignParentTop="true"
+            android:text="About me:"
+            android:layout_marginStart="110dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="51dp"
+            android:textColor="@color/lightGrey"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

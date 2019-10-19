@@ -8,10 +8,5 @@
         android:title="Search"
         app:actionViewClass="android.support.v7.widget.SearchView"
 
-        app:showAsAction="ifRoom|collapseActionView" />
-    <item
-        android:id="@+id/friends"
-        android:icon="@drawable/ic_people_black_24dp"
-        android:title="Friends"
-        app:showAsAction="always" />
+        app:showAsAction="always|collapseActionView" />
 </menu>

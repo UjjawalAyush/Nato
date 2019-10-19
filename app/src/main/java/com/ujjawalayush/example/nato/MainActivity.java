@@ -48,7 +48,8 @@ public class MainActivity extends AppCompatActivity {
     private ProgressDialog progressDialog;
     Uri photoUri;
     FirebaseUser firebaseUser;
-    Cursor c;
+    Cursor c,d;
+    String dob,current,school,home,schoolp,collegep,college,about;
     DBAdapter db;
     String uid,diplayName;
     @Override
@@ -56,16 +57,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         firebaseAuth =FirebaseAuth.getInstance();
         FirebaseUser user=firebaseAuth.getCurrentUser();
-        DBAdapter db=new DBAdapter(this);
-        db.open();
-        Cursor d=db.getAllContacts();
-        if(d.getCount()>0){
-            d.moveToPosition(0);
-            Toast.makeText(MainActivity.this,"Welcome "+d.getString(2),Toast.LENGTH_LONG).show();
-            Intent data=new Intent(MainActivity.this,MainPage.class);
-            startActivity(data);
+    Intent data=getIntent();
+    if(!data.hasExtra("row")){
+        if(user!=null&&user.isEmailVerified()){
+            Intent data1=new Intent(MainActivity.this,MainPage.class);
+            startActivity(data1);
         }
-        db.close();
+    }
+
         if(isNe()==false){
             Toast.makeText(this, "Please check your Internet connection", Toast.LENGTH_LONG).show();
         }
@@ -139,54 +138,17 @@ public class MainActivity extends AppCompatActivity {
                         firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
                         assert firebaseUser != null;
                         if (firebaseUser.isEmailVerified()) {
-                            db = new DBAdapter(MainActivity.this);
-                            db.open();
-                            uid = firebaseUser.getUid();
-                            diplayName = firebaseUser.getDisplayName();
-                            Cursor d=db.getAllContacts();
-                            if(d.getCount()==0) {
-                                DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("Users").child(uid);
-                                databaseReference.addValueEventListener(new ValueEventListener() {
-                                    @Override
-                                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                                        String PhoneNumber = dataSnapshot.child("Number").getValue().toString();
-                                        String emailAddress=dataSnapshot.child("Email").getValue().toString();
-                                        if (dataSnapshot.hasChild("PhotoUrl")) {
-                                            String p=dataSnapshot.child("PhotoUrl").getValue().toString();
-                                            byte[] byteBitmap= Base64.decode(p,Base64.DEFAULT);
-                                            long i = db.insertContact(uid, diplayName, PhoneNumber, byteBitmap,emailAddress);
+                            Toast.makeText(MainActivity.this, "Successfully Logged In", Toast.LENGTH_SHORT).show();
+                            progressDialog.dismiss();
+                            Intent data = new Intent(MainActivity.this, MainPage.class);
+                            startActivity(data);
 
-                                        } else {
-                                            byte[] photo = {0};
-                                            long i = db.insertContact(uid, diplayName, PhoneNumber, photo,emailAddress);
-                                        }
-                                        Toast.makeText(MainActivity.this, "Successfully Logged In", Toast.LENGTH_SHORT).show();
-                                        progressDialog.dismiss();
-                                        Intent data = new Intent(MainActivity.this, MainPage.class);
-                                        startActivity(data);
-
-                                    }
-
-                                    @Override
-                                    public void onCancelled(@NonNull DatabaseError databaseError) {
-
-                                    }
-                                });
-
-                            }
-                            else{
-                                Toast.makeText(MainActivity.this, "Successfully Logged In", Toast.LENGTH_SHORT).show();
-                                progressDialog.dismiss();
-                                Intent data = new Intent(MainActivity.this, MainPage.class);
-                                startActivity(data);
-                            }
-                        }
-                        else {
+                        } else {
                             Toast.makeText(MainActivity.this, "First verify email and then try again", Toast.LENGTH_LONG).show();
                             progressDialog.dismiss();
                         }
-
-                    } else {
+                    }
+                     else {
                         Toast.makeText(MainActivity.this, "Invalid E-Mail Id or Password", Toast.LENGTH_SHORT).show();
                         progressDialog.dismiss();
                     }

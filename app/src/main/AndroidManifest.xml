@@ -69,6 +69,111 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity android:name=".AddFriends" >
+            <intent-filter>
+                <action android:name="com.ujjawalayush.example.nato.addfriends" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Setting" >
+            <intent-filter>
+                <action android:name="com.ujjawalayush.example.nato.setting" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Profile2" >
+            <intent-filter>
+                <action android:name="com.ujjawalayush.example.nato.profile2" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ChatMain" >
+            <intent-filter>
+                <action android:name="com.ujjawalayush.example.nato.chatmain" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".chats" >
+            <intent-filter>
+                <action android:name="com.ujjawalayush.example.nato.chatmain" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Pictures" >
+            <intent-filter>
+                <action android:name="com.ujjawalayush.example.nato.pictures" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".tag" >
+            <intent-filter>
+                <action android:name="com.ujjawalayush.example.nato.tag" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Trip" >
+            <intent-filter>
+                <action android:name="com.ujjawalayush.example.nato.trip" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Notifications" >
+            <intent-filter>
+                <action android:name="com.ujjawalayush.example.nato.notifications" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Invite" >
+            <intent-filter>
+                <action android:name="com.ujjawalayush.example.nato.invite" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".TripInfo" >
+            <intent-filter>
+                <action android:name="com.ujjawalayush.example.nato.tripinfo" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Trip1" >
+            <intent-filter>
+                <action android:name="com.ujjawalayush.example.nato.trip1" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Schedule" >
+            <intent-filter>
+                <action android:name="com.ujjawalayush.example.nato.schedule" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Expense" >
+            <intent-filter>
+                <action android:name="com.ujjawalayush.example.nato.expense" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Recommend" >
+            <intent-filter>
+                <action android:name="com.ujjawalayush.example.nato.recommend" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

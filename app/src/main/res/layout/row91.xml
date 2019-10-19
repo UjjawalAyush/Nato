@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_margin="8dp"
+    android:id="@+id/card_view111"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/mainLayout11232"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/circ"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="1dp"
+            android:src="@drawable/persongood"
+            app:layout_constraintVertical_bias="0.109" />
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/circu"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="1dp"
+            android:src="@drawable/persongood"
+            app:layout_constraintVertical_bias="0.109" />
+        <TextView
+            android:id="@+id/textq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
+            android:text="Ujjawal_Ayush owes u 100 bucks"
+            android:layout_alignStart="@id/circu"
+            android:layout_marginStart="70dp"
+            android:textColor="@color/black"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/textq"
+            android:id="@+id/t"
+            android:layout_marginBottom="-30dp"/>
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:text="Settle"
+            android:id="@+id/b"
+            android:layout_centerHorizontal="true"
+            android:layout_alignTop="@id/t"
+            android:background="@color/lightBlue"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/lightGrey"/>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

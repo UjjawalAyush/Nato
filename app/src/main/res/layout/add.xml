@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -12,26 +17,15 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="0dp"
         android:textColor="@color/colorPrimaryDark" />
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignTop="@id/toolbar1"
-        android:layout_marginTop="5dp"
-        >
-        <com.mikhaellopez.circularimageview.CircularImageView
+        <ImageView
             android:id="@+id/circularImageView1"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_alignParentTop="false"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="60dp"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="55dp"
-            android:src="@drawable/luggage"
-            app:civ_border_color="#EEEEEE"
-            app:civ_border_width="4dp"
-            app:civ_shadow="true"
-            app:civ_shadow_color="#8BC34A"
-            app:civ_shadow_radius="10" />
+            android:src="@drawable/luggage" />
 
         <ImageButton
             android:id="@+id/imageButton1"
@@ -41,7 +35,7 @@
             android:layout_alignEnd="@id/circularImageView1"
             android:layout_alignParentTop="false"
             android:layout_alignParentEnd="false"
-            android:layout_marginTop="75dp"
+            android:layout_marginTop="60dp"
             android:layout_marginEnd="5dp"
             android:background="@drawable/border1"
             android:onClick="onClick1"
@@ -53,7 +47,7 @@
             android:layout_centerHorizontal="true"
             android:layout_alignParentTop="false"
             android:layout_alignTop="@id/circularImageView1"
-            android:layout_marginTop="140dp"
+            android:layout_marginTop="120dp"
             android:layout_width="300dp"
             android:background="@drawable/border"
             android:layout_height="370dp"
@@ -90,7 +84,7 @@
             android:id="@+id/textInput1"
             android:layout_alignTop="@id/view"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="60dp">
+            android:layout_marginTop="50dp">
 
             <EditText
                 android:layout_width="match_parent"
@@ -98,6 +92,7 @@
                 android:hint="Trip Name"
                 android:background="@drawable/edittext"
                 android:id="@+id/textInput1e"
+                android:textSize="15sp"
                 android:textColor="@color/black"
                 android:inputType="textPersonName"
                 android:textColorHint="@color/black"
@@ -111,7 +106,7 @@
             android:layout_alignStart="@+id/tex"
             android:layout_alignTop="@id/textInput1"
             android:layout_marginStart="0dp"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="50dp"
             android:background="@color/white"
             android:popupBackground="@color/white"
             android:spinnerMode="dropdown"
@@ -147,13 +142,13 @@
             android:layout_alignStart="@id/spinner1"
             android:layout_marginStart="0dp"
             android:layout_alignTop="@+id/spinner1"
-            android:layout_marginTop="45dp"
+            android:layout_marginTop="35dp"
             android:text="Description" />
 
         <EditText
             android:id="@+id/textInput3e"
             android:layout_width="290dp"
-            android:layout_height="100dp"
+            android:layout_height="80dp"
             android:layout_alignTop="@id/textView14"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="30dp"
@@ -174,9 +169,35 @@
             android:layout_alignParentBottom="false"
             android:layout_alignTop="@id/textInput3e"
             android:onClick="onClick"
-            android:layout_marginTop="115dp"
+            android:layout_marginTop="135dp"
             android:layout_centerHorizontal="true"
             android:background="@drawable/border1"
             android:text="Create Trip" />
-    </ScrollView>
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="false"
+            android:layout_alignParentTop="false"
+            android:textColor="@color/black"
+            android:layout_alignTop="@id/textInput3e"
+            android:layout_marginTop="90dp"
+            android:layout_marginStart="0dp"
+            android:layout_alignStart="@id/textInput3e"
+            android:text="Select Status" />
+        <Spinner
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner2"
+            android:layout_marginStart="130dp"
+            android:layout_alignStart="@id/textView13"
+            android:background="@color/white"
+            android:layout_alignTop="@id/textInput3e"
+            android:popupBackground="@color/white"
+            android:layout_marginTop="90dp"
+            android:spinnerMode="dropdown"
+            android:theme="@style/ThemeOverlay.AppCompat.Light">
+        </Spinner>
     </RelativeLayout>
+</ScrollView>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="5dp"
+        android:id="@+id/sender"
+
+        android:layout_marginEnd="40dp"
+        android:background="@color/grey">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginEnd="5dp"
+            android:textSize="14sp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="5dp"
+            android:text="tfgbdcag ygcgyavfg gcvajfkas vcadfkjakudbc cacvbhbfyh vcubdafhiudc hfbaduifhdf"
+            android:id="@+id/senderText"
+            android:textColor="@color/black"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/senderText"
+            android:layout_marginBottom="-20dp"
+            android:id="@+id/a"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="5dp"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:id="@+id/senderFooter"
+            android:layout_alignTop="@id/a"
+            android:layout_marginTop="0dp"
+            android:text="hh:mm:ss dd mmm yy"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="40dp"
+        android:id="@+id/receiver"
+        android:layout_marginEnd="5dp"
+        android:background="@color/white">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginEnd="5dp"
+            android:textSize="14sp"
+            android:layout_marginTop="5dp"
+            android:text="tfgbdcag ygcgyavfg gcvajfkas vcadfkjakudbc cacvbhbfyh vcubdafhiudc hfbaduifhdf"
+            android:id="@+id/recieverText"
+            android:textColor="@color/black"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/recieverText"
+            android:layout_marginBottom="-20dp"
+            android:id="@+id/b"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="5dp"
+            android:textColor="@color/lightGrey"
+            android:textSize="12sp"
+            android:id="@+id/recieverFooter"
+            android:layout_alignTop="@id/b"
+            android:layout_marginTop="0dp"
+            android:text="hh:mm:ss dd mmm yy"
+            />
+    </RelativeLayout>
+</RelativeLayout>

@@ -16,7 +16,7 @@ public class TabAdapter extends FragmentPagerAdapter {
             case 0:
                 return new GeneralFragment();
             case 1:
-                return new ErrandsFragment();
+                return new ErrandFragment();
             case 2:
                 return new MyProfileFragment();
             default:
@@ -34,9 +34,9 @@ public class TabAdapter extends FragmentPagerAdapter {
     public CharSequence getPageTitle(int position) {
         switch(position){
             case 0:
-                return "Trips";
+                return "Home";
             case 1:
-                return "Errands";
+                return "Trips";
             case 2:
                 return "My Trips";
             default:

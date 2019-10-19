@@ -53,6 +53,7 @@ public class Signup extends AppCompatActivity {
     ProgressDialog progressDialog;
     Cursor c;
     EditText username, number;
+    String f;
     String Username, phone, a;
     Button button;
     Uri uri;
@@ -201,6 +202,11 @@ public class Signup extends AppCompatActivity {
             username.requestFocus();
             return;
         }
+        else if(Username.contains(" ")){
+            username.setError("Username can't contain spaces");
+            username.requestFocus();
+            return;
+        }
         if (a.length() != 10) {
             number.setError("Please enter a valid mobile no.");
             number.requestFocus();
@@ -255,63 +261,54 @@ public class Signup extends AppCompatActivity {
                                                                     x = 2;
                                                                     if (x == 2) {
                                                                         if (uri != null) {
-                                                                            axe = getFileExtension(uri);
-                                                                            storageReference = FirebaseStorage.getInstance().getReference().child(Long.toString(System.currentTimeMillis()) + "." + getFileExtension(uri));
+                                                                            storageReference = FirebaseStorage.getInstance().getReference().child("Images").child(Long.toString(System.currentTimeMillis()) + "." + getFileExtension(uri));
                                                                             storageReference.putFile(uri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                                                                                 @Override
                                                                                 public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                                                                                     storageReference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                                                                                         @Override
                                                                                         public void onSuccess(Uri uri1) {
-                                                                                            DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("Users").child(FirebaseAuth.getInstance().getCurrentUser().getUid());
-                                                                                            byte[] byteBitmap=getBytes(bitmap);
-                                                                                            String string= Base64.encodeToString(byteBitmap,Base64.DEFAULT);
-                                                                                            databaseReference.child("PhotoUrl").setValue(string);
+                                                                                            DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("Users").child(user.getUid());
                                                                                             UserProfileChangeRequest profileUpdates = new UserProfileChangeRequest.Builder()
                                                                                                     .setDisplayName(Username).build();
-                                                                                            FirebaseAuth.getInstance().getCurrentUser().updateProfile(profileUpdates);
+                                                                                            user.updateProfile(profileUpdates);
+                                                                                            UserProfileChangeRequest profileUpdates1 = new UserProfileChangeRequest.Builder()
+                                                                                                    .setPhotoUri(uri1).build();
+                                                                                            user.updateProfile(profileUpdates1);
                                                                                             databaseReference.child("Username").setValue(Username);
                                                                                             databaseReference.child("Email").setValue(email);
                                                                                             databaseReference.child("Number").setValue(b);
-                                                                                            databaseReference.child("Uid").setValue(FirebaseAuth.getInstance().getCurrentUser().getUid());
-                                                                                            UserProfileChangeRequest profileUpdates1 = new UserProfileChangeRequest.Builder()
-                                                                                                    .setPhotoUri(uri1).build();
-                                                                                            FirebaseAuth.getInstance().getCurrentUser().updateProfile(profileUpdates1);
+                                                                                            databaseReference.child("Uid").setValue(user.getUid());
+                                                                                            databaseReference.child("PhotoUrl").setValue(uri1.toString());
                                                                                             progressDialog.dismiss();
                                                                                             Toast.makeText(Signup.this, "Email Verification successfully sent to your email id", Toast.LENGTH_LONG).show();
                                                                                             Intent data = new Intent(Signup.this, MainActivity.class);
                                                                                             startActivity(data);
+
                                                                                         }
                                                                                     });
                                                                                 }
-                                                                            }).addOnFailureListener(new OnFailureListener() {
-                                                                                @Override
-                                                                                public void onFailure(@NonNull Exception e) {
-                                                                                    Toast.makeText(Signup.this, "Profile Pic not uploaded", Toast.LENGTH_SHORT).show();
-                                                                                    progressDialog.dismiss();
-                                                                                }
                                                                             });
                                                                         } else {
-                                                                            DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("Users").child(FirebaseAuth.getInstance().getCurrentUser().getUid());
+                                                                            DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("Users").child(user.getUid());
                                                                             databaseReference.child("Username").setValue(Username);
                                                                             databaseReference.child("Number").setValue(b);
                                                                             databaseReference.child("Email").setValue(email);
-                                                                            databaseReference.child("Uid").setValue(FirebaseAuth.getInstance().getCurrentUser().getUid());
+                                                                            databaseReference.child("Uid").setValue(user.getUid());
                                                                             UserProfileChangeRequest profileUpdates = new UserProfileChangeRequest.Builder()
                                                                                     .setDisplayName(Username).build();
-                                                                            FirebaseAuth.getInstance().getCurrentUser().updateProfile(profileUpdates);
+                                                                            user.updateProfile(profileUpdates);
                                                                             progressDialog.dismiss();
                                                                             Intent data = new Intent(Signup.this, MainActivity.class);
                                                                             startActivity(data);
                                                                         }
+                                                                    } else if (task.isCanceled()) {
+                                                                        Toast.makeText(Signup.this, "Oops! Some problem occured,Please try again later", Toast.LENGTH_LONG).show();
+                                                                        progressDialog.dismiss();
                                                                     }
-                                                                } else if (task.isCanceled()) {
-                                                                    Toast.makeText(Signup.this, "Oops! Some problem occured,Please try again later", Toast.LENGTH_LONG).show();
-                                                                    progressDialog.dismiss();
                                                                 }
                                                             }
                                                         });
-
                                                     }
                                                 }
                                             });

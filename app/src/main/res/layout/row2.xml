@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_margin="8dp"
+    android:id="@+id/card_view111"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/mainLayout112"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/circularImageView11561"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="15dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="1dp"
+            android:src="@drawable/persongood"
+            app:layout_constraintVertical_bias="0.109" />
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/circularImageView1111"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="15dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="1dp"
+            android:src="@drawable/persongood"
+            app:layout_constraintVertical_bias="0.109" />
+        <TextView
+            android:id="@+id/text1112"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="10dp"
+            android:text="Ujjawal_Ayush"
+            android:layout_alignStart="@id/circularImageView1111"
+            android:layout_marginStart="110dp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/text121"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/circularImageView1111"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="110dp"
+            android:layout_marginTop="55dp"
+            android:layout_marginEnd="10dp"
+            android:text="ABCDEFGHIJKLMNOPQRSTU..."
+            android:textColor="@color/lightGrey"
+            android:textSize="15sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:textSize="12sp"
+            android:id="@+id/text1211"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="hh:mm:ss dd-mmm-yy"
+            android:layout_marginEnd="10dp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/lightGrey"/>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>
