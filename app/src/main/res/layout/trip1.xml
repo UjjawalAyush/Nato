@@ -29,6 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:id="@+id/textView"
+            android:onClick="onClick23"
             android:layout_marginEnd="20dp"
             android:text="Send Request"
             android:background="@drawable/border2"

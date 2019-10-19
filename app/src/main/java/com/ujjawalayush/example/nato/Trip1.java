@@ -18,6 +18,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -53,6 +54,8 @@ public class Trip1 extends AppCompatActivity {
     String m;
     ImageView imageView;
     int g,h,i,j,k;
+    RecyclerAdapter17 mAdapter1;
+    ArrayList<RecyclerData17> myList1=new ArrayList<>();
     Toolbar toolbar;
     ArrayList<RecyclerData> myList=new ArrayList<>();
     RecyclerAdapter9 mAdapter;
@@ -114,6 +117,23 @@ public class Trip1 extends AppCompatActivity {
             }
         });
         recyclerView1=(RecyclerView)findViewById(R.id.r);
+        LinearLayoutManager linearLayoutManager1 = new LinearLayoutManager(this);
+        recyclerView1.setLayoutManager(linearLayoutManager1);
+        mAdapter1=new RecyclerAdapter17(myList1);
+        recyclerView1.setAdapter(mAdapter1);
+        myList1.clear();
+        mAdapter1.notifyData(myList1);
+        RecyclerData17 mLog1=new RecyclerData17();
+        mLog1.setStartingDate("21-03-2000");
+        mLog1.setEndingDate("21-03-2000");
+        mLog1.setName("Dehradun");
+        mLog1.setBy("Ujjawal");
+        mLog1.setX("0");
+        mLog1.setTrip(trip);
+        mLog1.setTime(Long.toString(System.currentTimeMillis()));
+        mLog1.setDescription("Birthday Party");
+        myList1.add(mLog1);
+        mAdapter1.notifyData(myList1);
         toolbar.setNavigationIcon(getResources().getDrawable(R.drawable.ic_arrow_back_black_24dp));
         setSupportActionBar(toolbar);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
@@ -122,13 +142,15 @@ public class Trip1 extends AppCompatActivity {
                 onBackPressed();
             }
         });
-
-
-
     }
     @Override
     public boolean onSupportNavigateUp() {
         onBackPressed();
         return true;
+    }
+    public void onClick23(View v){
+
+        Intent data=new Intent(Trip1.this,MainPage.class);
+        startActivity(data);
     }
 }

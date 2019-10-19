@@ -43,6 +43,7 @@ public class RecFragment extends Fragment {
         mLog.setName("Dehradun");
         mLog.setBy("Ujjawal");
         mLog.setTrip(trip);
+        mLog.setX("1");
         mLog.setTime(Long.toString(System.currentTimeMillis()));
         mLog.setDescription("Birthday Party");
         myList.add(mLog);

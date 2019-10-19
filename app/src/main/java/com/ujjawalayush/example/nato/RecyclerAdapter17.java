@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -51,7 +52,11 @@ public class RecyclerAdapter17 extends RecyclerView.Adapter<RecyclerAdapter17.Re
         holder.startingDate.setText("Start Date : "+myList.get(position).getStartingDate());
         holder.endingDate.setText("End Date : "+myList.get(position).getEndingDate());
         holder.description.setText("Place of Visit: "+myList.get(position).getDescription());
-
+        if(myList.get(position).getX().equals("0")){
+            holder.b.setVisibility(View.INVISIBLE);
+            holder.by.setVisibility(View.INVISIBLE);
+            holder.average.setVisibility(View.INVISIBLE);
+        }
     }
 
     @Override
@@ -65,9 +70,10 @@ public class RecyclerAdapter17 extends RecyclerView.Adapter<RecyclerAdapter17.Re
     }
     public class RecyclerItemViewHolder extends RecyclerView.ViewHolder {
         private RelativeLayout mainLayout;
-        TextView startingDate,endingDate,name,description,by;
+        TextView startingDate,endingDate,name,description,by,average;
         CircularImageView imageView;
         Button edit;
+        ImageButton b;
 
 
         public RecyclerItemViewHolder(final View parent) {
@@ -75,7 +81,9 @@ public class RecyclerAdapter17 extends RecyclerView.Adapter<RecyclerAdapter17.Re
             name=(TextView)parent.findViewById(R.id.category1);
             description=(TextView)parent.findViewById(R.id.description1);
             by=(TextView)parent.findViewById(R.id.by);
+            b=(ImageButton)parent.findViewById(R.id.qwe);
             startingDate=(TextView)parent.findViewById(R.id.startingDate1);
+            average=(TextView)parent.findViewById(R.id.average);
             mainLayout=(RelativeLayout)parent.findViewById(R.id.mainLayout);
             endingDate=(TextView)parent.findViewById(R.id.endingDate1);
             mainLayout.setOnClickListener(new View.OnClickListener() {

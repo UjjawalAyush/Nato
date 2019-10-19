@@ -1,7 +1,7 @@
 package com.ujjawalayush.example.nato;
 
 public class RecyclerData17 {
-    String startingDate,endingDate,name,description,by,trip;
+    String startingDate,endingDate,name,description,by,trip,x;
     private String time;
 
     public void setDescription(String description) {
@@ -14,6 +14,14 @@ public class RecyclerData17 {
 
     public void setTrip(String trip) {
         this.trip = trip;
+    }
+
+    public String getX() {
+        return x;
+    }
+
+    public void setX(String x) {
+        this.x = x;
     }
 
     public String getDescription() {
