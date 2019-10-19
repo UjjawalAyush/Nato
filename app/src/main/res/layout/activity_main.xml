@@ -7,54 +7,85 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/editText3"
-        android:layout_width="320dp"
+    <com.github.florent37.materialtextfield.MaterialTextField
+        android:id="@+id/m1"
         android:layout_height="wrap_content"
+        android:layout_width="300dp"
+        app:mtf_cardCollapsedHeight="4dp"
+        app:mtf_image="@drawable/emailblack"
         android:layout_alignTop="@+id/imageView"
         android:layout_alignParentTop="false"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="80dp"
         android:layout_marginLeft="80dp"
-        android:textSize="15sp"
         android:layout_marginTop="130dp"
         android:ems="10"
-        android:hint="Email"
-        android:inputType="textEmailAddress"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
-        tools:layout_editor_absoluteX="32dp"
-        tools:layout_editor_absoluteY="199dp" />
 
-    <EditText
-        android:id="@+id/editText4"
-        android:layout_width="320dp"
+        app:mtf_labelColor="#FFFFFF"
+
+
+        >
+
+        <EditText
+            android:id="@+id/editText3"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:textColorHint="@color/black"
+            android:textSize="15sp"
+            tools:layout_editor_absoluteX="32dp"
+            tools:layout_editor_absoluteY="199dp" />
+
+    </com.github.florent37.materialtextfield.MaterialTextField>
+
+    <com.github.florent37.materialtextfield.MaterialTextField
+        android:id="@+id/m2"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/editText3"
+        android:layout_width="300dp"
+        android:layout_alignTop="@+id/m1"
+        app:mtf_cardCollapsedHeight="4dp"
+        app:mtf_image="@drawable/pass"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="80dp"
         android:layout_marginLeft="80dp"
         android:layout_marginTop="75dp"
         android:ems="10"
-        android:hint="Password"
-        android:textSize="15sp"
-        android:inputType="textPassword"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
-        tools:layout_editor_absoluteX="32dp"
-        tools:layout_editor_absoluteY="271dp" />
+
+        app:mtf_labelColor="#FFFFFF"
+
+
+        >
+
+        <EditText
+            android:id="@+id/editText4"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="15sp"
+            tools:layout_editor_absoluteX="32dp"
+            tools:layout_editor_absoluteY="271dp" />
+
+    </com.github.florent37.materialtextfield.MaterialTextField>
+
 
     <Button
         android:id="@+id/button"
+
         android:layout_width="320dp"
         android:layout_height="44dp"
-        android:layout_alignStart="@+id/editText4"
-        android:layout_alignLeft="@+id/editText3"
-        android:layout_alignTop="@+id/editText4"
-        android:layout_alignEnd="@+id/editText4"
-        android:layout_alignRight="@+id/editText4"
+        android:layout_alignStart="@+id/m2"
+        android:layout_alignLeft="@+id/m1"
+        android:layout_alignTop="@+id/m2"
+        android:layout_alignEnd="@+id/m2"
+        android:layout_alignRight="@+id/m2"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="75dp"
+        android:layout_marginTop="100dp"
         android:background="@drawable/border"
         android:onClick="onClick"
         android:text="LOGIN"
@@ -91,31 +122,27 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/textView"
-        android:layout_alignLeft="@+id/editText4"
-        android:layout_alignTop="@+id/editText4"
+        android:layout_alignLeft="@+id/m2"
+        android:layout_alignTop="@+id/m2"
         android:layout_alignParentTop="false"
-        android:textColor="@color/white"
-        android:layout_marginStart="0dp"
         android:layout_marginLeft="0dp"
         android:layout_marginTop="-20dp"
-        android:text="Password" />
+        android:text=""
+        android:textColor="@color/white" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
-        android:textColor="@color/white"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/editText4"
-        android:layout_alignStart="@+id/textView"
+        android:layout_above="@+id/m2"
         android:layout_alignLeft="@+id/textView"
-        android:layout_alignTop="@+id/editText3"
+        android:layout_alignTop="@+id/m1"
         android:layout_alignParentTop="false"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="-20dp"
         android:layout_marginLeft="0dp"
-        android:text="Email"
-        tools:text="Email" />
+        android:layout_marginTop="-20dp"
+        android:text=""
+        android:textColor="@color/white"
+        tools:text="" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -124,4 +151,6 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp" />
+
+
 </RelativeLayout>
