@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        android:id="@+id/toolbar6"
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
+        android:textColor="@color/colorPrimaryDark" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="300dp"
+        android:layout_height="250dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/border"
+        android:layout_marginTop="150dp"/>
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/textInput4"
+        android:layout_alignTop="@id/view2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp">
+
+        <EditText
+            android:id="@+id/textInput4e"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/edittext"
+            android:gravity="top|left"
+            android:hint=""
+            android:inputType="textPersonName|textMultiLine"
+            android:maxLines="30"
+            android:singleLine="false"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="15sp" />
+    </android.support.design.widget.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textInput4"
+        android:textColor="@color/black"
+        android:layout_alignStart="@+id/textInput4"
+        android:layout_marginStart="0dp"
+        android:layout_marginBottom="-50dp"
+        android:text="Enter Current City : " />
+
+    <Button
+        android:id="@+id/update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="false"
+        android:layout_centerHorizontal="true"
+        android:layout_alignTop="@id/textView17"
+        android:background="@drawable/border1"
+        android:layout_marginTop="155dp"
+        android:text="Update" />
+</RelativeLayout>
