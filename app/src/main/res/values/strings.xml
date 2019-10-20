@@ -3,6 +3,21 @@
     <string name="open">open</string>
     <string name="close">close</string>
 
+
+    <string name="slide_1_title">GUIDES</string>
+    <string name="slide_1_desc">Explore new cities with expert GUIDES</string>
+
+    <string name="slide_2_title">CHAT</string>
+    <string name="slide_2_desc">Chat with Guides and Friends to plan Trips</string>
+
+    <string name="slide_3_title">EXPENSE</string>
+    <string name="slide_3_desc">Manage your travel expenses easily</string>
+
+    <string name="slide_4_title">RECOMMENDATIONS</string>
+    <string name="slide_4_desc">Choose best trips and guides based on true recommendations</string>
+
+    <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear data</string>
+    <string name="play_again">Play Again</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

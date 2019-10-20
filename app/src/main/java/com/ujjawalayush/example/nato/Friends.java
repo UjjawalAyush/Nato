@@ -16,12 +16,10 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
-import android.util.Base64;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -315,7 +313,7 @@ public class Friends extends AppCompatActivity implements SearchView.OnQueryText
         return true;
     }
     public void onClick4(View v){
-        Intent data=new Intent(Friends.this,AddFriends.class);
-        startActivity(data);
+
+
     }
 }
